@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
@@ -16,43 +17,43 @@ import java.util.HashMap;
 public class DoctorDetailsActivity extends AppCompatActivity {
     private String[][] doctor_details1 =
             {
-                    {"Doctor Name : Kasibante Julius", "Hospital Address : Hoima", "Exp : 5yrs", "Mobile No : 0761488516","50,000"},
-                    {"Doctor Name : Kusemererwa Willium", "Hospital Address : Hoima", "Exp : 5yrs", "Mobile No : 0761488516","50,000"},
-                    {"Doctor Name : Mulindwa Julius", "Hospital Address : Lugazi", "Exp : 5yrs", "Mobile No : 0761488516","50,000"},
-                    {"Doctor Name : Muwanguzi Anthony", "Hospital Address : Mukono", "Exp : 5yrs", "Mobile No : 0761488516","50,000"},
-                    {"Doctor Name : Ameria Kyambadde", "Hospital Address : Kampala", "Exp : 5yrs", "Mobile No : 0761488516","50,000"}
+                    {"Doctor : Kasibante Julius", "Hospital Address : Hoima", "Exp : 5yrs", "Mobile No : 0761488516","50,000"},
+                    {"Doctor : Kusemererwa Willium", "Hospital Address : Hoima", "Exp : 5yrs", "Mobile No : 0761488516","50,000"},
+                    {"Doctor : Mulindwa Julius", "Hospital Address : Lugazi", "Exp : 5yrs", "Mobile No : 0761488516","50,000"},
+                    {"Doctor : Muwanguzi Anthony", "Hospital Address : Mukono", "Exp : 5yrs", "Mobile No : 0761488516","50,000"},
+                    {"Doctor : Ameria Kyambadde", "Hospital Address : Kampala", "Exp : 5yrs", "Mobile No : 0761488516","50,000"}
             };
     private String[][] doctor_details2 =
             {
-                    {"Doctor Name : Mirembe Julius", "Hospital Address : Hoima", "Exp : 5yrs", "Mobile No : 0761488516","50,000"},
-                    {"Doctor Name : Kusemererwa Willium", "Hospital Address : Hoima", "Exp : 5yrs", "Mobile No : 0761488516","50,000"},
-                    {"Doctor Name : Mulindwa Julius", "Hospital Address : Lugazi", "Exp : 5yrs", "Mobile No : 0761488516","50,000"},
-                    {"Doctor Name : Muwanguzi Anthony", "Hospital Address : Mukono", "Exp : 5yrs", "Mobile No : 0761488516","50,000"},
-                    {"Doctor Name : Ameria Kyambadde", "Hospital Address : Kampala", "Exp : 5yrs", "Mobile No : 0761488516","50,000"}
+                    {"Doctor : Mirembe Julius", "Hospital Address : Hoima", "Exp : 5yrs", "Mobile No : 0761488516","50,000"},
+                    {"Doctor : Kusemererwa Willium", "Hospital Address : Hoima", "Exp : 5yrs", "Mobile No : 0761488516","50,000"},
+                    {"Doctor : Mulindwa Julius", "Hospital Address : Lugazi", "Exp : 5yrs", "Mobile No : 0761488516","50,000"},
+                    {"Doctor : Muwanguzi Anthony", "Hospital Address : Mukono", "Exp : 5yrs", "Mobile No : 0761488516","50,000"},
+                    {"Doctor : Ameria Kyambadde", "Hospital Address : Kampala", "Exp : 5yrs", "Mobile No : 0761488516","50,000"}
             };
     private String[][] doctor_details3 =
             {
-                    {"Doctor Name : Kasibante Julius", "Hospital Address : Hoima", "Exp : 5yrs", "Mobile No : 0761488516","50,000"},
-                    {"Doctor Name : Kusemererwa Willium", "Hospital Address : Hoima", "Exp : 5yrs", "Mobile No : 0761488516","50,000"},
-                    {"Doctor Name : Mulindwa Julius", "Hospital Address : Lugazi", "Exp : 5yrs", "Mobile No : 0761488516","50,000"},
-                    {"Doctor Name : Muwanguzi Anthony", "Hospital Address : Mukono", "Exp : 5yrs", "Mobile No : 0761488516","50,000"},
-                    {"Doctor Name : Ameria Kyambadde", "Hospital Address : Kampala", "Exp : 5yrs", "Mobile No : 0761488516","50,000"}
+                    {"Doctor : Kasibante Julius", "Hospital Address : Hoima", "Exp : 5yrs", "Mobile No : 0761488516","50,000"},
+                    {"Doctor : Kusemererwa Willium", "Hospital Address : Hoima", "Exp : 5yrs", "Mobile No : 0761488516","50,000"},
+                    {"Doctor : Mulindwa Julius", "Hospital Address : Lugazi", "Exp : 5yrs", "Mobile No : 0761488516","50,000"},
+                    {"Doctor : Muwanguzi Anthony", "Hospital Address : Mukono", "Exp : 5yrs", "Mobile No : 0761488516","50,000"},
+                    {"Doctor : Ameria Kyambadde", "Hospital Address : Kampala", "Exp : 5yrs", "Mobile No : 0761488516","50,000"}
             };
     private String[][] doctor_details4 =
             {
-                    {"Doctor Name : Kasibante Julius", "Hospital Address : Hoima", "Exp : 5yrs", "Mobile No : 0761488516","50,000"},
-                    {"Doctor Name : Kusemererwa Willium", "Hospital Address : Hoima", "Exp : 5yrs", "Mobile No : 0761488516","50,000"},
-                    {"Doctor Name : Mulindwa Julius", "Hospital Address : Lugazi", "Exp : 5yrs", "Mobile No : 0761488516","50,000"},
-                    {"Doctor Name : Muwanguzi Anthony", "Hospital Address : Mukono", "Exp : 5yrs", "Mobile No : 0761488516","50,000"},
-                    {"Doctor Name : Ameria Kyambadde", "Hospital Address : Kampala", "Exp : 5yrs", "Mobile No : 0761488516","50,000"}
+                    {"Doctor : Kasibante Julius", "Hospital Address : Hoima", "Exp : 5yrs", "Mobile No : 0761488516","50,000"},
+                    {"Doctor : Kusemererwa Willium", "Hospital Address : Hoima", "Exp : 5yrs", "Mobile No : 0761488516","50,000"},
+                    {"Doctor : Mulindwa Julius", "Hospital Address : Lugazi", "Exp : 5yrs", "Mobile No : 0761488516","50,000"},
+                    {"Doctor : Muwanguzi Anthony", "Hospital Address : Mukono", "Exp : 5yrs", "Mobile No : 0761488516","50,000"},
+                    {"Doctor : Ameria Kyambadde", "Hospital Address : Kampala", "Exp : 5yrs", "Mobile No : 0761488516","50,000"}
             };
     private String[][] doctor_details5 =
             {
-                    {"Doctor Name : Kasibante Julius", "Hospital Address : Hoima", "Exp : 5yrs", "Mobile No : 0761488516","50,000"},
-                    {"Doctor Name : Kusemererwa Willium", "Hospital Address : Hoima", "Exp : 5yrs", "Mobile No : 0761488516","50,000"},
-                    {"Doctor Name : Mulindwa Julius", "Hospital Address : Lugazi", "Exp : 5yrs", "Mobile No : 0761488516","50,000"},
-                    {"Doctor Name : Muwanguzi Anthony", "Hospital Address : Mukono", "Exp : 5yrs", "Mobile No : 0761488516","50,000"},
-                    {"Doctor Name : Ameria Kyambadde", "Hospital Address : Kampala", "Exp : 5yrs", "Mobile No : 0761488516","50,000"}
+                    {"Doctor : Kasibante Julius", "Hospital Address : Hoima", "Exp : 5yrs", "Mobile No : 0761488516","50,000"},
+                    {"Doctor : Kusemererwa Willium", "Hospital Address : Hoima", "Exp : 5yrs", "Mobile No : 0761488516","50,000"},
+                    {"Doctor : Mulindwa Julius", "Hospital Address : Lugazi", "Exp : 5yrs", "Mobile No : 0761488516","50,000"},
+                    {"Doctor : Muwanguzi Anthony", "Hospital Address : Mukono", "Exp : 5yrs", "Mobile No : 0761488516","50,000"},
+                    {"Doctor : Ameria Kyambadde", "Hospital Address : Kampala", "Exp : 5yrs", "Mobile No : 0761488516","50,000"}
             };
     TextView tv;
     Button btn;
@@ -109,5 +110,18 @@ public class DoctorDetailsActivity extends AppCompatActivity {
                 );
         ListView lst = findViewById(R.id.textViewDD);
         lst.setAdapter(sa);
+
+        lst.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int i, long l) {
+                Intent it = new Intent(DoctorDetailsActivity.this,BookAppointmentActivity.class);
+                it.putExtra("text1",title);
+                it.putExtra("text2",doctor_details[i][0]);
+                it.putExtra("text3",doctor_details[i][1]);
+                it.putExtra("text4",doctor_details[i][3]);
+                it.putExtra("text5",doctor_details[i][4]);
+                startActivity(it);
+            }
+        });
     }
 }
